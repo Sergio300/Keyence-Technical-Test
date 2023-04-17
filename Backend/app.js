@@ -13,8 +13,8 @@ app.use(postRoutes)
 
 console.log(__dirname)
 app.use(express.static(join(__dirname,'../frontend/build')))
-app.get('*', (req,res) => {
+/*app.get('*', (req,res) => {
     res.sendFile(join(__dirname,'../frontend/build/index.html'))
-})
+})*/
 
 export default app
