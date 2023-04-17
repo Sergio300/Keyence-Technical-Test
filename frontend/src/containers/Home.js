@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import {VscEmptyWindow} from 'react-icons/vsc'
 import {Card} from '../components/Card'
 import axios from 'axios';
+import { response } from 'express';
 
 export function Home() {
 
@@ -18,12 +19,13 @@ export function Home() {
   const insertFile = async () => {
     const f = new FormData()
     f.append("file",archivo)
-    await axios.post('http://127.0.0.1:27017/importExcel', f,{headers:{'Content-Type': 'multipart/form-data'}})
+    await axios.post('http://127.0.0.1:3000/importExcel', f,{headers:{'Content-Type': 'multipart/form-data'}})
     .then(response=>{
       console.log(response.data)
     }).catch(error=>{
       console.log(error)
     })
+    console.log(response.data)
     window.location.reload()
   }
 
