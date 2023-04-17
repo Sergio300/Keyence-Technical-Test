@@ -12,7 +12,7 @@
     "dev": "nodemon Backend/index.js --ignore frontend",
     "build" : "npm install --prefix Backend && npm run build --prefix frontend",
     "start":"node Backend",
-    "heroku-postbuild": "NPM_ CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix Backend && npm run build --prefix frontend"
   },
   "keywords": [],
   "author": "",
