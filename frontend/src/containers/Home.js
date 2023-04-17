@@ -47,18 +47,19 @@ export function Home() {
       </div>
     }
     else{
+      return(
       <div className='grid md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-3 '>
         {post.map(post =>(
           <Card post={post} key={post._id}></Card>
         ))}
       </div>
+      )
     }
 
   }
 
   return (
     <div>
-
       <div className='flex justify-center px-3 py-2'>
         <input type='file' name="file" className='px-3 py-2 focus:outline-none rounded bg-gray-600 text-white mb-4 m-4'
         onChange={(e)=>upload(e.target.files[0])}
@@ -73,7 +74,7 @@ export function Home() {
             Create New Data
           </button>
       </Link>
-      
+
       {rendermain()}
       
     </div>
