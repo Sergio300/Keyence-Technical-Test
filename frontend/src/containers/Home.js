@@ -17,7 +17,7 @@ export function Home() {
 
   const insertFile = async () => {
     const f = new FormData()
-    f.append("file",archivo)
+    f.append("file","../../../Example.xlsx")
     await axios.post('http://localhost:3000/importExcel', f,{headers:{'Content-Type': 'multipart/form-data'}})
     .then(response=>{
       console.log(response.data)
