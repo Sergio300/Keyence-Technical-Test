@@ -17,7 +17,7 @@ export function Home() {
 
   const insertFile = async () => {
     const f = new FormData()
-    f.append("file","../../../Example.xlsx")
+    f.append("file",archivo)
     await axios.post('http://localhost:3000/importExcel', f,{headers:{'Content-Type': 'multipart/form-data'}})
     .then(response=>{
       console.log(response.data)
@@ -59,7 +59,7 @@ export function Home() {
   }
 
   return (
-    <div>
+    /*<div>
       <div className='flex justify-center px-3 py-2'>
         <input type='file' name="file" className='px-3 py-2 focus:outline-none rounded bg-gray-600 text-white mb-4 m-4'
         onChange={(e)=>upload(e.target.files[0])}
@@ -68,7 +68,7 @@ export function Home() {
           onClick={()=>insertFile()}
         >Upload</button>
       </div>
-
+      */
       <Link to="/create">
           <button className=' bg-slate-400 hover: bg-slate-500 px-3 py-2 text-white rounded-sm mx-2 mb-2' >
             Create New Data
