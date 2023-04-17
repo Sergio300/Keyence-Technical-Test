@@ -10,8 +10,9 @@
 
   "scripts": {
     "dev": "nodemon Backend/index.js --ignore frontend",
-    "build" : "npm install --prefix Backend && npm run build --prefix frontend",
-    "start":"node Backend"
+    "build" : "npm install --prefix frontend && npm run build --prefix frontend",
+    "start":"node Backend",
+    "heroku-postbuild": " "
   },
   "keywords": [],
   "author": "",
