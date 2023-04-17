@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node Backend",
     "dev": "nodemon Backend/index.js --ignore frontend",
-    "heroku-postbuild": "pm install --prefix frontend && npm run build --prefix frontend",
+    "heroku-postbuild": "npm install --prefix frontend && npm run build --prefix frontend",
     "build": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend && rm -rf frontend/node_modules"
   },
   "keywords": [],
