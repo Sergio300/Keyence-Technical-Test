@@ -48,7 +48,20 @@ export function Home() {
     }
     else{
       return(
+
+        
+
       <div className='grid md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-3 '>
+
+<div className='flex justify-center px-3 py-2'>
+        <input type='file' name="file" className='px-3 py-2 focus:outline-none rounded bg-gray-600 text-white mb-4 m-4'
+        onChange={(e)=>upload(e.target.files[0])}
+        ></input>
+        <button className='px-3 py-2 focus:outline-none rounded bg-gray-800 text-white mb-4 m-4' 
+          onClick={()=>insertFile()}
+        >Upload</button>
+      </div>
+
         {post.map(post =>(
           <Card post={post} key={post._id}></Card>
         ))}
@@ -60,6 +73,7 @@ export function Home() {
 
   return (
     <div>
+      
       
       <Link to="/create">
           <button className=' bg-slate-400 hover: bg-slate-500 px-3 py-2 text-white rounded-sm mx-2 mb-2' >
